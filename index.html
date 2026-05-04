@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal academic website of Vicente Honorato Rodríguez, PhD student in Astrophysics working on numerical simulations, accretion disks, and tidal disruption events." />
+  <title>Vicente Honorato Rodríguez</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <header class="topbar">
+    <a href="#home" class="logo" aria-label="Go to home">Vicente Honorato Rodríguez</a>
+
+    <button class="menu-button" id="openMenu" aria-label="Open navigation menu">
+      <span>Menu</span>
+      <span class="hamburger"></span>
+    </button>
+  </header>
+
+  <nav class="side-menu" id="sideMenu" aria-label="Main navigation">
+    <button class="close-button" id="closeMenu" aria-label="Close navigation menu">×</button>
+
+    <a href="#home">Home</a>
+    <a href="#about">About me</a>
+    <a href="#research">Research</a>
+    <a href="#numerical-work">Numerical work</a>
+    <a href="#thesis">Undergraduate thesis</a>
+    <a href="#publications">Publications</a>
+    <a href="#teaching">Teaching</a>
+    <a href="#cv">CV</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="overlay" id="overlay"></div>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-orb hero-orb-one"></div>
+      <div class="hero-orb hero-orb-two"></div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <img src="assets/images/hero-background.png" alt="" class="disk disk-one" />
+        <img src="assets/images/hero-background2.png" alt="" class="disk disk-two" />
+      </div>
+
+      <div class="hero-content fade-in">
+        <div class="hero-line"></div>
+
+        <h1>Vicente Honorato Rodríguez</h1>
+
+        <div class="hero-line"></div>
+
+        <p class="subtitle">PhD Student in Astrophysics</p>
+
+        <div class="affiliation">
+          <p>Doctorado en Ciencias Físicas</p>
+          <p>Universidad Técnica Federico Santa María (USM)</p>
+          <p>Pontificia Universidad Católica de Valparaíso (PUCV)</p>
+          <p>Valparaíso, Chile</p>
+        </div>
+
+        <div class="hero-tags" aria-label="Research keywords">
+          <span>Numerical Simulations</span>
+          <span>Accretion Disks</span>
+          <span>Tidal Disruption Events</span>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#research" class="primary-button">Explore research</a>
+          <a href="#contact" class="secondary-button">Contact</a>
+        </div>
+      </div>
+
+      <a href="#about" class="learn-more" aria-label="Scroll to about section">
+        <span>Learn more</span>
+        <strong>↓</strong>
+      </a>
+    </section>
+
+    <section id="about" class="section about reveal">
+      <div class="container about-layout">
+        <div class="portrait-card">
+          <div class="portrait-glow"></div>
+          <img src="assets/images/profile.jpg" alt="Portrait of Vicente Honorato Rodríguez" />
+          <div class="portrait-caption">
+            <span>Vicente Honorato Rodríguez</span>
+            <small>PhD Student in Astrophysics</small>
+          </div>
+        </div>
+
+        <div class="section-copy">
+          <p class="section-kicker">About me</p>
+          <h2>Astrophysics through simulations, structure, and physical intuition.</h2>
+
+          <p>
+            I am a PhD student in Astrophysics working at the intersection of
+            computational modeling and high-energy astrophysical phenomena. My current
+            research focuses on hydrodynamical simulations of tidal disruption events
+            and the long-term signatures they can leave in disk-like systems.
+          </p>
+
+          <p>
+            Before my PhD, I worked on extragalactic astrophysics and the internal
+            structure of dark-matter halos. That background shaped the way I approach
+            problems: connecting numerical models, physical interpretation, and
+            astrophysical observables.
+          </p>
+
+          <div class="advisor-note">
+            <span>Advisor</span>
+            <a
+              href="https://orcid.org/0000-0001-9789-5098"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Prof. Matías Montesinos
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="section research reveal">
+      <div class="container">
+        <div class="section-heading centered">
+          <p class="section-kicker">Research</p>
+          <h2>Current scientific direction</h2>
+          <p>
+            I study how tidal disruption events reshape disk-like astrophysical
+            systems, and what physical traces these encounters may leave behind
+            across different environments.
+          </p>
+        </div>
+
+        <div class="research-grid">
+          <article class="research-card">
+            <span class="card-number">01</span>
+            <h3>Tidal disruption events</h3>
+            <p>
+              I am interested in the physical mechanisms that govern tidal disruption
+              events, from the initial encounter to the redistribution of energy and
+              angular momentum in the surrounding material.
+            </p>
+          </article>
+
+          <article class="research-card">
+            <span class="card-number">02</span>
+            <h3>Accretion disks</h3>
+            <p>
+              My work explores how disks respond to violent dynamical events in
+              different astrophysical contexts, including systems inspired by
+              protoplanetary and AGN-like environments.
+            </p>
+          </article>
+
+          <article class="research-card">
+            <span class="card-number">03</span>
+            <h3>Physical interpretation</h3>
+            <p>
+              I aim to connect dynamical evolution with interpretable physical
+              signatures, identifying which structures and timescales are most
+              informative about the history of the interaction.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="numerical-work" class="section numerical reveal">
+      <div class="container split-layout">
+        <div class="section-copy">
+          <p class="section-kicker">Numerical work</p>
+          <h2>Simulating the dynamical imprint of tidal disruption events.</h2>
+
+          <p>
+            My numerical work focuses on hydrodynamical simulations of tidal
+            disruption events interacting with pre-existing disks. I study how the
+            encounter redistributes energy and angular momentum, reshapes the disk
+            structure, and leaves short- and long-term dynamical imprints on the
+            system.
+          </p>
+
+          <p>
+            This work aims to build a physical framework for understanding how
+            violent transient events can alter disks across different astrophysical
+            environments, from protoplanetary disks to AGN-like systems.
+          </p>
+
+          <div class="toolkit">
+            <span>Hydrodynamical simulations</span>
+            <span>Disk–TDE interactions</span>
+            <span>Transient dynamics</span>
+            <span>Disk evolution</span>
+            <span>Python</span>
+            <span>LaTeX</span>
+          </div>
+        </div>
+
+        <div class="simulation-showcase">
+          <img src="assets/images/hero-background2.png" alt="Stylized hydrodynamical disk simulation" />
+
+          <div class="floating-stat stat-one">
+            <strong>Disk–TDE interaction</strong>
+            <span>energy · angular momentum · morphology</span>
+          </div>
+
+          <div class="floating-stat stat-two">
+            <strong>Hydrodynamical response</strong>
+            <span>transient structures · long-term imprints</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="thesis" class="section thesis reveal">
+      <div class="container thesis-layout">
+        <div class="thesis-image">
+          <img src="assets/images/previous-work.png" alt="Large-scale structure visualization from previous work" />
+        </div>
+
+        <div class="section-copy">
+          <p class="section-kicker">Undergraduate thesis</p>
+          <h2>Internal dark-matter profiles of galaxies</h2>
+
+          <div class="metadata-list">
+            <p><span>Title</span> Perfiles Internos de Materia Oscura de Galaxias: Efectos Bariónicos y Evolución en Redshift</p>
+            <p><span>Institution</span> Universidad Técnica Federico Santa María</p>
+            <p><span>Year</span> 2025</p>
+            <p><span>Advisor</span> Prof. Antonio Montero-Dorta</p>
+          </div>
+
+          <p>
+            My undergraduate thesis studied the internal structure of dark-matter
+            halos using high-resolution cosmological hydrodynamical simulations. I
+            analyzed 22,999 dark-matter density profiles from IllustrisTNG50-1,
+            focusing on their inner slopes and their connection with galaxy
+            properties, environment, and redshift evolution.
+          </p>
+
+          <p>
+            The results highlight the importance of baryonic physics in shaping the
+            central structure of halos, providing a useful framework for interpreting
+            observations of galaxies and clusters within the ΛCDM cosmological model.
+          </p>
+
+          <a
+            href="assets/thesis/Vicente_Honorato_Rodriguez_Undergraduate_Thesis.pdf"
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View undergraduate thesis (in Spanish)
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications" class="section publications reveal">
+      <div class="container">
+        <div class="section-heading centered">
+          <p class="section-kicker">Publications</p>
+          <h2>Scientific output</h2>
+        </div>
+
+        <article class="publication-card">
+          <div>
+            <p class="pub-status">Submitted to A&amp;A · 2025</p>
+            <h3>The Inner Dark-Matter Structure of Galaxies</h3>
+            <p>
+              Vicente Honorato, Antonio D. Montero-Dorta, M. Celeste Artale,
+              Ankit Kumar
+            </p>
+          </div>
+
+          <div class="publication-actions">
+            <a href="https://ui.adsabs.harvard.edu/abs/2026arXiv260402566H/abstract" target="_blank" rel="noopener noreferrer">ADS</a>
+            <a href="https://arxiv.org/abs/2604.02566" target="_blank" rel="noopener noreferrer">arXiv</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="teaching" class="section teaching reveal">
+      <div class="container split-layout reverse">
+        <div class="section-copy">
+          <p class="section-kicker">Teaching</p>
+          <h2>Teaching material on accretion disk theory.</h2>
+
+          <p>
+            During my undergraduate studies, I worked as a teaching assistant in
+            several courses. One of the most meaningful experiences was preparing a
+            complete set of conceptual tutorials for the course:
+          </p>
+
+          <blockquote>
+            Teoría de Discos de Acreción, Fundamentos Teóricos, Simulaciones Numéricas y Conexión Observacional.
+          </blockquote>
+
+          <p>
+            The material consists of nine tutorials, combining conceptual discussion
+            with exercises designed to connect theoretical foundations, numerical
+            modeling, and observational motivation.
+          </p>
+
+          <a
+            href="assets/teaching/Accretion_Disk_Teaching_Notes.pdf"
+            class="btn btn-primary"
+            target="_blank"
+          >
+            View teaching compendium · Spanish version
+          </a>
+        </div>
+
+        <div class="teaching-panel">
+          <span>2025</span>
+          <h3>Accretion Disk Theory</h3>
+          <p>9 tutorial notes · conceptual exercises · numerical perspective</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="cv" class="section cv-section reveal">
+      <div class="container centered-block">
+        <p class="section-kicker">CV</p>
+        <h2>Curriculum vitae</h2>
+        <p>
+          A complete PDF version of my academic CV is available here.
+        </p>
+
+        <a class="primary-button" href="assets/cv/Vicente_Honorato_Rodriguez_CV.pdf" target="_blank" rel="noopener noreferrer">
+          Download CV
+        </a>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact reveal">
+      <div class="container contact-layout">
+        <div>
+          <p class="section-kicker">Contact</p>
+          <h2>Let’s connect.</h2>
+          <p>
+            I am always happy to connect about astrophysics, numerical simulations,
+            accretion disks, tidal disruption events, and future collaborations.
+          </p>
+        </div>
+
+        <div class="social-grid">
+          <a
+            href="https://github.com/vahonorato"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub profile"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.1c-3.34.73-4.04-1.42-4.04-1.42-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1.01-.32 3.3 1.23a11.4 11.4 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.82.58A12 12 0 0 0 12 .5Z"/>
+            </svg>
+            <span>GitHub</span>
+          </a>
+
+          <a
+            href="https://orcid.org/0009-0002-4806-732X"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="ORCID profile"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Zm-1.7 6.15h2.97c3.5 0 5.3 2.5 5.3 5.85 0 3.58-1.96 5.85-5.3 5.85H10.3V6.15Zm1.83 1.65v8.4h1.03c2.45 0 3.5-1.73 3.5-4.2 0-2.3-1.05-4.2-3.5-4.2h-1.03ZM6.8 8.05a1.1 1.1 0 1 1 0-2.2 1.1 1.1 0 0 1 0 2.2Zm-.91 1.45h1.83v8.35H5.89V9.5Z"/>
+            </svg>
+            <span>ORCID</span>
+          </a>
+
+          <a
+            href="https://www.instagram.com/vahonorato.r"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram profile"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2Zm0 2A3.75 3.75 0 0 0 4 7.75v8.5A3.75 3.75 0 0 0 7.75 20h8.5A3.75 3.75 0 0 0 20 16.25v-8.5A3.75 3.75 0 0 0 16.25 4h-8.5ZM12 7.35A4.65 4.65 0 1 1 12 16.65 4.65 4.65 0 0 1 12 7.35Zm0 2A2.65 2.65 0 1 0 12 14.65 2.65 2.65 0 0 0 12 9.35Zm5.05-2.65a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2Z"/>
+            </svg>
+            <span>Instagram</span>
+          </a>
+
+          <a
+            href="mailto:vicente.honorato@usm.cl"
+            aria-label="Email Vicente"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13Zm2.2-.3 7.8 6.2 7.8-6.2H4.2Zm15.6 13.6V7.55l-7.23 5.75a.9.9 0 0 1-1.14 0L4.2 7.55V18.8h15.6Z"/>
+            </svg>
+            <span>Email</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© Vicente Honorato Rodríguez · 2026</p>
+    <p>Computational astrophysics · Numerical simulations · Accretion physics</p>
+  </footer>
+</body>
+</html>
